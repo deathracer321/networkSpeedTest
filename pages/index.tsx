@@ -58,9 +58,6 @@ export default function Home() {
 
   return (
     <div className={isDarkMode ? styles.containerDark : styles.container}>
-      <Head>
-        <title>My Custom Title</title>
-      </Head>
       <button className={styles.themeToggleButton} style={{backgroundColor:isDarkMode?"white":"black",color:isDarkMode?"black":"white"}} onClick={toggleTheme}>
         {isDarkMode ? 'Light' : 'Dark'}
       </button>
@@ -96,6 +93,7 @@ export default function Home() {
           />
         </div>
       </div>
+      <p>Estimated wait time: 30 seconds</p>
     </div>
   );
 }
