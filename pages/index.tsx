@@ -70,6 +70,7 @@ export default function Home() {
       <div className={styles.result}>
         <div className={styles.speedometerContainer}>
           <p style={{ textAlign: 'center' }}>Download Speed: {loading ? varyingValue : speedData.download} Mbps</p>
+          <br/>
           <ReactSpeedometer
             maxValue={100}
             value={loading ? varyingValue : speedData.download}
@@ -77,11 +78,12 @@ export default function Home() {
             startColor="green"
             segments={10}
             endColor="blue"
-            height={210}
+            height={200}
           />
         </div>
         <div className={styles.speedometerContainer}>
           <p style={{ textAlign: 'center' }}>Upload Speed: {loading ? varyingValue : speedData.upload} Mbps</p>
+          <br/>
           <ReactSpeedometer
             maxValue={100}
             value={loading ? varyingValue : speedData.upload}
@@ -89,11 +91,11 @@ export default function Home() {
             startColor="green"
             segments={10}
             endColor="blue"
-            height={210}
+            height={200}
           />
         </div>
       </div>
-      <p>Estimated wait time: 30 seconds</p>
+      <p>Estimated wait time: 30 seconds</p><br/><br/>
     </div>
   );
 }
